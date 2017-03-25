@@ -27,6 +27,12 @@
         },
         "com.qdev.webintent": {
             "PACKAGE_NAME": "com.hume.random_chat_uy"
+        },
+        "cordova-admob-sdk": {
+            "PACKAGE_NAME": "com.hume.random_chat_uy"
+        },
+        "cordova-plugin-admob-free": {
+            "PACKAGE_NAME": "com.hume.come03"
         }
     },
     "dependent_plugins": {
@@ -35,6 +41,9 @@
         },
         "cordova-plugin-file": {
             "PACKAGE_NAME": "com.hume.random_chat_uy"
+        },
+        "cordova-promise-polyfill": {
+            "PACKAGE_NAME": "com.hume.come03"
         }
     }
 }

@@ -273,6 +273,27 @@ module.exports = [
         "clobbers": [
             "WebIntent"
         ]
+    },
+    {
+        "file": "plugins/cordova-promise-polyfill/www/Promise.js",
+        "id": "cordova-promise-polyfill.Promise",
+        "pluginId": "cordova-promise-polyfill",
+        "runs": true
+    },
+    {
+        "file": "plugins/cordova-promise-polyfill/www/promise.min.js",
+        "id": "cordova-promise-polyfill.promise.min",
+        "pluginId": "cordova-promise-polyfill"
+    },
+    {
+        "file": "plugins/cordova-plugin-admob-free/www/admob.js",
+        "id": "cordova-plugin-admob-free.AdMob",
+        "pluginId": "cordova-plugin-admob-free",
+        "clobbers": [
+            "admob",
+            "AdMob",
+            "plugins.AdMob"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -286,7 +307,10 @@ module.exports.metadata =
     "cordova-plugin-file-transfer": "1.6.1",
     "cordova-plugin-sim": "1.3.3",
     "ionic-plugin-keyboard": "2.2.1",
-    "com.qdev.webintent": "1.0.1"
+    "com.qdev.webintent": "1.0.1",
+    "cordova-admob-sdk": "0.6.0",
+    "cordova-promise-polyfill": "0.0.2",
+    "cordova-plugin-admob-free": "0.8.0"
 }
 // BOTTOM OF METADATA
 });

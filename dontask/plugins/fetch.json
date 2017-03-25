@@ -70,5 +70,29 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "cordova-plugin-admob-free": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-admob-free"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-promise-polyfill": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-promise-polyfill"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-admob-sdk": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-admob-sdk"
+        },
+        "is_top_level": false,
+        "variables": {}
     }
 }

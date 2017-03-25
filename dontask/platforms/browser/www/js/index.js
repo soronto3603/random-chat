@@ -142,6 +142,12 @@ function yourCallbackFunction(){
 }
 
 var is_ad=0;
+function init_admob(){
+  admob.interstitial.config({
+   id: 'ca-app-pub-1542264535834690/5885305568',
+ });
+  admob.interstitial.prepare();
+}
 var app = {
   // Application Constructor
   initialize: function() {
@@ -149,12 +155,13 @@ var app = {
     
   },
   onDeviceReady: function() {
+    init_admob();
     document.addEventListener('backbutton',onBackKeyDown,false);
     document.addEventListener("resume", yourCallbackFunction, false);
     window.addEventListener("native.keyboardhide", this.onKeyboardHide);
-    navigator.notification.alert("load",'error','error');
     console.log(navigator.notification);
     requestReadPermission();
+    admob.interstitial.show();
     //document.getElementById('iframe').src="http://me2.do/5eqIYyYh";
     window.onmessage=function(e){
       //navigator.notification.alert(e.data,{},'debug','done');
@@ -188,13 +195,19 @@ var app = {
       else if(e.data=="exit_message"){
         navigator.app.exitApp();
       }else{
-        is_ad=1;
-        document.getElementById('iframe').src=e.data;
+        
+        window.plugins.webintent.startActivity({
+            action: window.plugins.webintent.ACTION_VIEW,
+            url: e.data},
+            function() {},
+            function() {alert('Failed to open URL via Android Intent');}
+        );
+        //is_ad=1;
+        //document.getElementById('iframe').src=e.data;
       }
     }
   },
   onKeyboardHide:function(e){
-    alert('a');
   }
 };
 

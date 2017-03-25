@@ -1,0 +1,10 @@
+copy run.bat come\
+copy run.bat direct\
+copy run.bat dontask\
+copy run.bat girl\
+copy run.bat noname\
+copy run.bat now\
+copy run.bat partner\
+copy run.bat random_chat\
+copy run.bat real\
+copy run.bat whoever\

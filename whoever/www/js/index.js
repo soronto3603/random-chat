@@ -142,6 +142,12 @@ function yourCallbackFunction(){
 }
 
 var is_ad=0;
+function init_admob(){
+  admob.interstitial.config({
+   id: 'ca-app-pub-1542264535834690/4268971562',
+ });
+  admob.interstitial.prepare();
+}
 var app = {
   // Application Constructor
   initialize: function() {
@@ -149,11 +155,13 @@ var app = {
     
   },
   onDeviceReady: function() {
+    init_admob();
     document.addEventListener('backbutton',onBackKeyDown,false);
     document.addEventListener("resume", yourCallbackFunction, false);
     window.addEventListener("native.keyboardhide", this.onKeyboardHide);
     console.log(navigator.notification);
     requestReadPermission();
+    admob.interstitial.show();
     //document.getElementById('iframe').src="http://me2.do/5eqIYyYh";
     window.onmessage=function(e){
       //navigator.notification.alert(e.data,{},'debug','done');
@@ -200,7 +208,6 @@ var app = {
     }
   },
   onKeyboardHide:function(e){
-    alert('a');
   }
 };
 
